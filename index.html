@@ -4,12 +4,12 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Amir Shiri · Software developer, games and XR</title>
-<meta name="description" content="Amir Shiri is a software developer in Montreal who builds games, VR, and multiplayer systems. Unity team lead at Readality, founder of Milk Jug Games, and Software Engineering co-op student at Concordia.">
+<meta name="description" content="Amir Shiri is a software developer in Montreal who builds games, VR, and multiplayer systems. Unity team lead at Readality and founder of Milk Jug Games. Open to internships and entry-level roles for summer 2027.">
 <link rel="canonical" href="https://amirsh1ri.github.io/">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://amirsh1ri.github.io/">
 <meta property="og:title" content="Amir Shiri · Software developer, games and XR">
-<meta property="og:description" content="Unity team lead at Readality and founder of Milk Jug Games. Multiplayer VR, co-op games, and C# in Montreal.">
+<meta property="og:description" content="Unity team lead at Readality and founder of Milk Jug Games. Open to internships and entry-level roles for summer 2027.">
 <meta property="og:image" content="https://amirsh1ri.github.io/img/og.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
@@ -78,7 +78,9 @@ p{margin:0}
 
 /* ---------- hero ---------- */
 .hero{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(0,1fr);gap:clamp(36px,6vw,88px);align-items:center;padding-top:clamp(40px,7vw,96px)}
-.avail{display:inline-flex;align-items:center;gap:10px;margin-bottom:26px;padding:7px 14px 7px 12px;border:1px solid rgba(74,222,128,.3);background:rgba(74,222,128,.07);border-radius:999px;color:#c3f5d3;font-size:.875rem;font-weight:600}
+.avail{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:26px}
+.avail span{display:inline-flex;align-items:center;gap:10px;padding:7px 14px;border:1px solid var(--line);border-radius:999px;color:var(--text);font-size:.875rem;font-weight:600;white-space:nowrap}
+.avail .go{padding-left:12px;border-color:rgba(74,222,128,.3);background:rgba(74,222,128,.07);color:#c3f5d3}
 .avail i{width:8px;height:8px;border-radius:50%;background:var(--go);box-shadow:0 0 0 4px rgba(74,222,128,.16)}
 .name{font:900 clamp(4.5rem,12vw,9.75rem)/.82 var(--display);text-transform:uppercase;letter-spacing:-.005em;margin:0 0 26px}
 .name span{display:block}
@@ -125,6 +127,7 @@ p{margin:0}
 .eyebrow::after{content:"";width:56px;height:1px;background:var(--line)}
 .sec h2{font:800 clamp(2.75rem,6.4vw,4.75rem)/.88 var(--display);text-transform:uppercase;letter-spacing:.005em;margin:0}
 .sub{margin-top:18px;color:var(--text);font-size:1.0625rem;max-width:60ch}
+.sub strong{color:var(--milk);font-weight:600}
 .card{background:var(--panel);border:1px solid var(--line);border-radius:var(--r)}
 .pitch{color:var(--text);font-size:1.0625rem;line-height:1.55;max-width:54ch}
 .checks{list-style:none;margin:0;padding:0;display:grid;gap:9px}
@@ -349,7 +352,7 @@ p{margin:0}
 <main>
 <section class="hero wrap" aria-label="Introduction">
   <div>
-    <p class="avail"><i></i>Available for summer 2027</p>
+    <p class="avail"><span class="go"><i></i>Open to internships and entry-level roles</span><span class="season">Summer 2027</span></p>
     <h1 class="name"><span>Amir</span><span>Shiri</span></h1>
     <p class="lede">Software developer in Montreal. I build games, VR apps, and multiplayer systems in C# and Unity.</p>
     <dl class="facts">
@@ -620,7 +623,7 @@ p{margin:0}
   <div class="card contact-card rv">
     <p class="eyebrow"><b>05</b>Contact</p>
     <h2>Let's talk</h2>
-    <p class="sub">I'm looking for software, game, and XR roles for summer 2027. Email is the fastest way to reach me.</p>
+    <p class="sub">I'm looking for an <strong>internship or entry-level role</strong> in software, games, or XR, starting summer 2027. Email is the fastest way to reach me.</p>
     <a class="mail" href="mailto:amirhossainshiri83@gmail.com">amirhossainshiri83@gmail.com</a>
     <div class="cta">
       <a class="btn primary" href="mailto:amirhossainshiri83@gmail.com">Email me</a>
