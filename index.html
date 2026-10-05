@@ -195,6 +195,7 @@ p{margin:0}
 .g-links{grid-area:links;align-self:end}
 .g-built{grid-area:built;padding:22px 6px 6px;border-top:1px solid var(--line)}
 .g-built .checks{grid-template-columns:repeat(3,minmax(0,1fr));gap:12px 32px}
+.g-built .two{grid-template-columns:repeat(2,minmax(0,1fr))}
 .game h3{font:800 clamp(2.5rem,4.6vw,3.6rem)/.88 var(--display);text-transform:uppercase;margin:0 0 12px}
 .role{margin:0;border-top:1px solid var(--line)}
 .role div{display:grid;grid-template-columns:5.75rem minmax(0,1fr);gap:12px;align-items:baseline;padding:11px 0;border-bottom:1px solid var(--line)}
@@ -203,6 +204,7 @@ p{margin:0}
 
 /* media */
 .m{position:relative;display:block;overflow:hidden;border-radius:10px;background:#07090d;cursor:zoom-in;text-decoration:none}
+.m[hidden]{display:none}
 .m img,.m video{width:100%;height:100%;object-fit:cover;transition:transform .6s cubic-bezier(.2,.7,.2,1),filter .3s}
 .m:hover img,.m:hover video{transform:scale(1.035)}
 .main{aspect-ratio:16/9}
@@ -212,6 +214,9 @@ p{margin:0}
 .chip,.count{position:absolute;display:inline-flex;align-items:center;gap:7px;border-radius:999px;background:rgba(9,11,16,.74);-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px);color:#fff}
 .chip{left:12px;top:12px;padding:5px 11px 4px;font:400 1.1rem/1 var(--osd);letter-spacing:.08em;text-transform:uppercase}
 .chip i{width:7px;height:7px;border-radius:50%;background:var(--rec);box-shadow:0 0 6px var(--rec)}
+.chip.br{left:auto;top:auto;right:12px;bottom:12px}
+.play{position:absolute;left:50%;top:50%;width:34px;height:34px;margin:-17px 0 0 -17px;display:grid;place-items:center;border-radius:50%;background:rgba(9,11,16,.74);-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px);color:#fff}
+.play .i{width:13px;height:13px;margin-left:2px}
 .count{right:12px;bottom:12px;padding:6px 11px;font-size:.82rem;font-weight:600}
 .count .i{width:14px;height:14px}
 
@@ -326,6 +331,8 @@ p{margin:0}
   .top nav .opt{display:none}
   .projects,.studio-stats{grid-template-columns:1fr}
   .thumbs{gap:6px}
+  .play{width:26px;height:26px;margin:-13px 0 0 -13px}
+  .play .i{width:10px;height:10px;margin-left:1px}
   .path{grid-template-columns:1fr;gap:14px}
   .path li{padding:0 0 0 24px}
   .path li::before{top:5px}
@@ -463,13 +470,20 @@ p{margin:0}
       <p class="pitch">Co-op cozy horror for 1 to 4 players. Farm by day, defend your cabin by night.</p>
     </div>
     <div class="g-media">
-      <a class="m main" href="img/hh-night.webp" data-g="hh" data-cap="Hollow Hearth: a creature reaches the cabin at night"><img src="img/hh-night.webp" srcset="img/hh-night-sm.webp 640w, img/hh-night.webp 1120w" sizes="(min-width: 961px) 620px, 100vw" alt="Hollow Hearth: a creature reaches the cabin at night" width="1120" height="617" loading="lazy" decoding="async"></a>
+      <a class="m main" href="img/hh-recruit.mp4" data-g="hh" data-kind="video" data-poster="img/hh-npc-clip.webp" data-cap="Hollow Hearth NPC system: Rosa the Defender asks for work, joins the farm, and starts patrolling (third-person camera for animation testing)">
+        <video class="clip" muted loop playsinline preload="none" poster="img/hh-npc-clip.webp" width="960" height="538" aria-label="Hollow Hearth NPC system clip"><source src="img/hh-npc-clip.webm" type="video/webm"><source src="img/hh-npc-clip.mp4" type="video/mp4"></video>
+        <span class="chip"><i></i>Rec · NPC system</span>
+        <span class="chip br">Third-person test cam</span>
+      </a>
       <div class="thumbs">
+        <a class="m" href="img/hh-defenders.mp4" data-g="hh" data-kind="video" data-poster="img/hh-defenders.webp" data-cap="Hollow Hearth: on night 1, hired defenders switch from patrolling to fighting the creatures (third-person camera for animation testing)"><img src="img/hh-defenders-sm.webp" alt="Video: Hollow Hearth NPC defenders on night 1" width="640" height="358" loading="lazy" decoding="async"><span class="play" aria-hidden="true"><svg class="i"><use href="#i-play"/></svg></span></a>
+        <a class="m" href="img/hh-night.webp" data-g="hh" data-cap="Hollow Hearth: a creature reaches the cabin at night"><img src="img/hh-night-sm.webp" alt="Hollow Hearth: a creature reaches the cabin at night" width="640" height="353" loading="lazy" decoding="async"></a>
         <a class="m" href="img/hh-day.webp" data-g="hh" data-cap="Hollow Hearth: the farm by day"><img src="img/hh-day-sm.webp" alt="Hollow Hearth: the farm by day" width="640" height="359" loading="lazy" decoding="async"></a>
-        <a class="m" href="img/hh-dusk.webp" data-g="hh" data-cap="Hollow Hearth: the same farm at dusk, before the night wave"><img src="img/hh-dusk-sm.webp" alt="Hollow Hearth: the farm at dusk, before the night wave" width="640" height="357" loading="lazy" decoding="async"></a>
-        <a class="m" href="img/hh-craft.webp" data-g="hh" data-cap="Hollow Hearth: crafting a bear trap"><img src="img/hh-craft-sm.webp" alt="Hollow Hearth: crafting a bear trap" width="640" height="355" loading="lazy" decoding="async"></a>
-        <a class="m" href="img/hh-inventory.webp" data-g="hh" data-cap="Hollow Hearth: inventory and storage"><img src="img/hh-inventory-sm.webp" alt="Hollow Hearth: inventory and storage" width="640" height="356" loading="lazy" decoding="async"></a>
+        <a class="m" href="img/hh-dusk.webp" data-g="hh" data-cap="Hollow Hearth: the same farm at dusk, before the night wave" aria-label="Hollow Hearth: the farm at dusk, before the night wave, plus 3 more images and clips"><img src="img/hh-dusk-sm.webp" alt="" width="640" height="357" loading="lazy" decoding="async"><span class="more" aria-hidden="true">+3</span></a>
       </div>
+      <a class="m" hidden href="img/hh-craft.webp" data-g="hh" data-cap="Hollow Hearth: crafting a bear trap"></a>
+      <a class="m" hidden href="img/hh-inventory.webp" data-g="hh" data-cap="Hollow Hearth: inventory and storage"></a>
+      <a class="m" hidden href="img/hh-console.mp4" data-g="hh" data-kind="video" data-poster="img/hh-console.webp" data-cap="Hollow Hearth: spawning an NPC from the in-game dev console (third-person camera for animation testing)"></a>
     </div>
     <dl class="role g-role">
       <div><dt>My role</dt><dd>Lead developer. I built most of the game; our artists made the models, characters, and animation.</dd></div>
@@ -481,8 +495,9 @@ p{margin:0}
     </div>
     <div class="g-built">
       <p class="built-h">What I built</p>
-      <ul class="checks">
+      <ul class="checks two">
         <li>Server-authoritative co-op on FishNet and Steam, with proximity voice chat</li>
+        <li>An NPC system: recruitable workers with jobs, job routines, and randomized names and perks</li>
         <li>NavMesh enemy AI, combat, weapons, and inventory</li>
         <li>Grid building, crafting, day and night wave cycles, and controller support</li>
       </ul>
@@ -515,7 +530,7 @@ p{margin:0}
       <div><dt>Studio</dt><dd>Milk Jug Games</dd></div>
     </dl>
     <div class="links g-links">
-      <a class="btn primary" href="https://www.youtube.com/watch?v=WfgQaLsO2s0" data-yt="WfgQaLsO2s0" data-cap="Elevated Horrors gameplay video" target="_blank" rel="noopener"><svg class="i" aria-hidden="true"><use href="#i-play"/></svg>Watch gameplay</a>
+      <a class="btn primary" href="https://www.youtube.com/watch?v=WfgQaLsO2s0" data-yt="WfgQaLsO2s0" data-cap="Elevated Horrors showcase video" target="_blank" rel="noopener"><svg class="i" aria-hidden="true"><use href="#i-play"/></svg>Watch showcase</a>
       <a class="btn" href="https://github.com/AmirSh1ri/Unity-HorrorElevator-WIP-" target="_blank" rel="noopener">GitHub</a>
       <a class="btn" href="https://milkythethird.itch.io/" target="_blank" rel="noopener">itch.io</a>
     </div>
