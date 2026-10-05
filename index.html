@@ -289,8 +289,6 @@ p{margin:0}
 
 /* ---------- responsive ---------- */
 @media (max-width:960px){
-  .hero{grid-template-columns:1fr}
-  .vf{justify-self:start;max-width:300px}
   .feature{grid-template-columns:1fr}
   .game{grid-template-columns:1fr;grid-template-areas:"head" "media" "role" "built" "links"}
   .g-built{padding:0;border-top:0}
@@ -301,6 +299,26 @@ p{margin:0}
   .projects{grid-template-columns:1fr 1fr}
   .xp{grid-template-columns:1fr}
 }
+@media (max-width:860px){
+  .hero{display:flex;flex-wrap:wrap;align-items:center;column-gap:clamp(16px,5vw,28px);row-gap:0}
+  .hero-text{display:contents}
+  .avail,.lede,.facts,.cta{flex:0 0 100%}
+  .avail{order:1}
+  .name{order:2;flex:0 0 auto;margin:0}
+  .vf{order:3;flex:0 0 clamp(120px,40vw,200px);width:auto;max-width:none;border-radius:12px}
+  .lede{order:4;margin-top:28px}
+  .facts{order:5}
+  .cta{order:6}
+  .osd{font-size:1.05rem}
+  .osd .c{width:18px;height:18px}
+  .osd .tl,.osd .tr{top:10px}
+  .osd .bl,.osd .br{bottom:10px}
+  .osd .tl,.osd .bl{left:10px}
+  .osd .tr,.osd .br{right:10px}
+  .osd .rec{top:13px;left:34px}
+  .osd .tc{bottom:13px;right:34px}
+  .osd .bat,.osd .cam{display:none}
+}
 @media (max-width:720px){
   .top nav .btn{display:none}
 }
@@ -308,8 +326,6 @@ p{margin:0}
   .top nav .opt{display:none}
   .projects,.studio-stats{grid-template-columns:1fr}
   .thumbs{gap:6px}
-  .osd{font-size:1.25rem}
-  .osd .cam{display:none}
   .path{grid-template-columns:1fr;gap:14px}
   .path li{padding:0 0 0 24px}
   .path li::before{top:5px}
@@ -319,9 +335,13 @@ p{margin:0}
   .lb-nav{top:auto;bottom:calc(58px + env(safe-area-inset-bottom,0px));margin-top:0}
   .lb-stage{padding-bottom:64px}
 }
+@media (max-width:359px){
+  .avail span{font-size:.78rem;padding:6px 11px}
+  .osd{font-size:.9rem}
+}
 </style>
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"Person","name":"Amir Shiri","jobTitle":"Software developer","url":"https://amirsh1ri.github.io/","email":"mailto:amirhossainshiri83@gmail.com","address":{"@type":"PostalAddress","addressLocality":"Montreal","addressCountry":"CA"},"worksFor":{"@type":"Organization","name":"Readality","url":"https://readality.com/"},"sameAs":["https://github.com/AmirSh1ri","https://milkythethird.itch.io/"]}
+{"@context":"https://schema.org","@type":"Person","name":"Amir Shiri","jobTitle":"Software developer","url":"https://amirsh1ri.github.io/","email":"mailto:amirhossainshiri83@gmail.com","address":{"@type":"PostalAddress","addressLocality":"Montreal","addressCountry":"CA"},"worksFor":{"@type":"Organization","name":"Readality","url":"https://readality.com/"},"sameAs":["https://www.linkedin.com/in/amir-shiri-3b56232a9/","https://github.com/AmirSh1ri","https://milkythethird.itch.io/"]}
 </script>
 </head>
 <body>
@@ -351,7 +371,7 @@ p{margin:0}
 
 <main>
 <section class="hero wrap" aria-label="Introduction">
-  <div>
+  <div class="hero-text">
     <p class="avail"><span class="go"><i></i>Open to internships and entry-level roles</span><span class="season">Summer 2027</span></p>
     <h1 class="name"><span>Amir</span><span>Shiri</span></h1>
     <p class="lede">Software developer in Montreal. I build games, VR apps, and multiplayer systems in C# and Unity.</p>
@@ -364,6 +384,7 @@ p{margin:0}
     <div class="cta">
       <a class="btn primary" href="#work">See my work</a>
       <a class="btn" href="mailto:amirhossainshiri83@gmail.com">Email me</a>
+      <a class="btn" href="https://www.linkedin.com/in/amir-shiri-3b56232a9/" target="_blank" rel="noopener">LinkedIn</a>
       <a class="btn" href="https://github.com/AmirSh1ri" target="_blank" rel="noopener">GitHub</a>
       <a class="btn" href="https://milkythethird.itch.io/" target="_blank" rel="noopener">itch.io</a>
     </div>
@@ -627,6 +648,7 @@ p{margin:0}
     <a class="mail" href="mailto:amirhossainshiri83@gmail.com">amirhossainshiri83@gmail.com</a>
     <div class="cta">
       <a class="btn primary" href="mailto:amirhossainshiri83@gmail.com">Email me</a>
+      <a class="btn" href="https://www.linkedin.com/in/amir-shiri-3b56232a9/" target="_blank" rel="noopener">LinkedIn</a>
       <a class="btn" href="https://github.com/AmirSh1ri" target="_blank" rel="noopener">GitHub</a>
       <a class="btn" href="https://milkythethird.itch.io/" target="_blank" rel="noopener">itch.io</a>
     </div>
