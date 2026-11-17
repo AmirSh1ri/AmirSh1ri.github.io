@@ -175,6 +175,11 @@ p{margin:0}
 .ra-reader .ring.two{width:430%;border-color:rgba(244,177,62,.25)}
 
 /* ---------- studio ---------- */
+.org-logo{display:block;height:40px;width:auto;margin-bottom:16px}
+.brand-head{display:flex;align-items:center;gap:18px}
+.brand-head img{flex:none;width:76px;height:76px;border-radius:16px;box-shadow:0 0 0 1px var(--line)}
+.models{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;padding:10px}
+.models .m{aspect-ratio:4/3;border-radius:8px}
 .studio-stats{display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:12px;margin-bottom:20px}
 .stat{display:flex;align-items:center;gap:18px;padding:20px 22px}
 .stat .num{font:800 3rem/.85 var(--display);color:var(--milk);flex:none}
@@ -330,6 +335,8 @@ p{margin:0}
 @media (max-width:640px){
   .top nav .opt{display:none}
   .projects,.studio-stats{grid-template-columns:1fr}
+  .models{grid-template-columns:1fr 1fr;gap:8px;padding:8px}
+  .brand-head img{width:60px;height:60px;border-radius:13px}
   .thumbs{gap:6px}
   .play{width:26px;height:26px;margin:-13px 0 0 -13px}
   .play .i{width:10px;height:10px;margin-left:1px}
@@ -421,6 +428,7 @@ p{margin:0}
       <div class="ra-reader b"><span class="ring"></span><span class="ring two"></span><span class="head"></span></div>
     </div>
     <div class="feature-body">
+      <img class="org-logo" src="img/readality-logo.webp" alt="Readality logo" width="125" height="40" loading="lazy" decoding="async">
       <p class="when">Jan 2026 to now · Concordia Innovation Lab, Montreal</p>
       <h3>Unity team lead</h3>
       <p class="pitch">Readality turns comics and manga into VR worlds you read together on Meta Quest. It's incubated at Concordia's Zù program and partnered with publisher Les 400 Coups.</p>
@@ -445,7 +453,7 @@ p{margin:0}
 <section class="sec wrap" id="studio">
   <div class="sec-head rv">
     <p class="eyebrow"><b>02</b>My studio</p>
-    <h2>Milk Jug Games</h2>
+    <div class="brand-head"><img src="img/mjg-logo.webp" alt="Milk Jug Games logo" width="76" height="76" loading="lazy" decoding="async"><h2>Milk Jug Games</h2></div>
     <p class="sub">I founded Milk Jug Games in 2025 and lead it: the team, the code, and production. We're making two games for Steam.</p>
   </div>
   <div class="studio-stats rv">
@@ -623,9 +631,26 @@ p{margin:0}
   </div>
 </section>
 
+<section class="sec wrap" id="blender">
+  <div class="sec-head rv">
+    <p class="eyebrow"><b>04</b>On the side</p>
+    <h2>Blender</h2>
+    <p class="sub">I'm a developer first, but I also model. These are a few pieces I made for our games.</p>
+  </div>
+  <div class="card models rv">
+    <a class="m" href="img/bl-cabin-2.webp" data-g="bl" data-cap="Hollow Hearth: the cabin upgraded to two floors"><img src="img/bl-cabin-2-sm.webp" alt="Blender model: Hollow Hearth log cabin with two floors" width="640" height="434" loading="lazy" decoding="async"></a>
+    <a class="m" href="img/bl-props.webp" data-g="bl" data-cap="Horror props: a camera, VHS tape, pistol, axe, toy blaster, crosses, battery, and bullets"><img src="img/bl-props-sm.webp" alt="Set of horror game props on a stone floor" width="640" height="280" loading="lazy" decoding="async"></a>
+    <a class="m" href="img/bl-cat-outfit.webp" data-g="bl" data-cap="Hollow Hearth: a cat character in an outfit set with glasses and hair clips"><img src="img/bl-cat-outfit-sm.webp" style="object-position:50% 20%" alt="Blender model: cat character in a striped shirt and glasses" width="640" height="714" loading="lazy" decoding="async"></a>
+    <a class="m" href="img/bl-cat-game.webp" data-g="bl" data-cap="Hollow Hearth: a cat character in the game" aria-label="Hollow Hearth: a cat character in the game, plus 3 more models"><img src="img/bl-cat-game-sm.webp" style="object-position:50% 25%" alt="" width="640" height="648" loading="lazy" decoding="async"><span class="more" aria-hidden="true">+3</span></a>
+    <a class="m" hidden href="img/bl-cabin-1.webp" data-g="bl" data-cap="Hollow Hearth: the cabin at its first level"></a>
+    <a class="m" hidden href="img/bl-pistol.webp" data-g="bl" data-cap="A low-poly pistol with a detachable magazine"></a>
+    <a class="m" hidden href="img/bl-feet.webp" data-g="bl" data-cap="A sculpted feet study"></a>
+  </div>
+</section>
+
 <section class="sec wrap" id="experience">
   <div class="sec-head rv">
-    <p class="eyebrow"><b>04</b>Background</p>
+    <p class="eyebrow"><b>05</b>Background</p>
     <h2>Experience and skills</h2>
   </div>
   <div class="xp">
@@ -659,7 +684,7 @@ p{margin:0}
 
 <section class="sec wrap" id="contact">
   <div class="card contact-card rv">
-    <p class="eyebrow"><b>05</b>Contact</p>
+    <p class="eyebrow"><b>06</b>Contact</p>
     <h2>Let's talk</h2>
     <p class="sub">I'm looking for an <strong>internship or entry-level role</strong> in software, games, or XR, starting summer 2027. Email is the fastest way to reach me.</p>
     <a class="mail" href="mailto:amirhossainshiri83@gmail.com">amirhossainshiri83@gmail.com</a>
