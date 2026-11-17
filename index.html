@@ -175,7 +175,7 @@ p{margin:0}
 .ra-reader .ring.two{width:430%;border-color:rgba(244,177,62,.25)}
 
 /* ---------- studio ---------- */
-.org-logo{display:block;height:40px;width:auto;margin-bottom:16px}
+.ra-logo{position:absolute;left:4.5%;top:6%;z-index:2;width:clamp(96px,22%,150px);height:auto}
 .brand-head{display:flex;align-items:center;gap:18px}
 .brand-head img{flex:none;width:76px;height:76px;border-radius:16px;box-shadow:0 0 0 1px var(--line)}
 .models{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;padding:10px}
@@ -336,6 +336,7 @@ p{margin:0}
   .top nav .opt{display:none}
   .projects,.studio-stats{grid-template-columns:1fr}
   .models{grid-template-columns:1fr 1fr;gap:8px;padding:8px}
+  .ra-logo{left:50%;top:auto;bottom:7%;width:30%;transform:translateX(-50%)}
   .brand-head img{width:60px;height:60px;border-radius:13px}
   .thumbs{gap:6px}
   .play{width:26px;height:26px;margin:-13px 0 0 -13px}
@@ -421,14 +422,14 @@ p{margin:0}
     <h2>Readality</h2>
   </div>
   <article class="card feature rv">
-    <div class="ra" role="img" aria-label="Illustration: two readers in VR headsets sharing a floating comic book, with voice chat rings around them">
+    <div class="ra" role="img" aria-label="Readality logo above an illustration of two readers in VR headsets sharing a floating comic book, with voice chat rings around them">
+      <img class="ra-logo" src="img/readality-logo.webp" alt="" width="260" height="83" loading="lazy" decoding="async">
       <div class="ra-floor"></div>
       <div class="ra-book"><div class="ra-page l"><i class="p p1"></i><i class="p p2"></i><i class="p p3"></i><i class="p p4"></i></div><div class="ra-page r"><i class="p p1"></i><i class="p p2"></i><i class="p p3"></i><i class="p p4"></i></div></div>
       <div class="ra-reader a"><span class="ring"></span><span class="ring two"></span><span class="head"></span></div>
       <div class="ra-reader b"><span class="ring"></span><span class="ring two"></span><span class="head"></span></div>
     </div>
     <div class="feature-body">
-      <img class="org-logo" src="img/readality-logo.webp" alt="Readality logo" width="125" height="40" loading="lazy" decoding="async">
       <p class="when">Jan 2026 to now · Concordia Innovation Lab, Montreal</p>
       <h3>Unity team lead</h3>
       <p class="pitch">Readality turns comics and manga into VR worlds you read together on Meta Quest. It's incubated at Concordia's Zù program and partnered with publisher Les 400 Coups.</p>
