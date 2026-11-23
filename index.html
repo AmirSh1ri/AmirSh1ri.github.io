@@ -94,8 +94,6 @@ p{margin:0}
 /* viewfinder */
 .vf{position:relative;justify-self:end;width:100%;max-width:420px;aspect-ratio:4/5;border-radius:14px;overflow:hidden;background:#000;box-shadow:0 50px 100px -50px rgba(244,177,62,.45),0 0 0 1px rgba(255,255,255,.04)}
 .vf>img{width:100%;height:100%;object-fit:cover;filter:contrast(1.05) saturate(.92)}
-.vf-swap{position:absolute;left:50%;top:14px;z-index:4;transform:translateX(-50%);padding:6px 12px 5px;border:1px solid rgba(255,255,255,.35);border-radius:999px;background:rgba(9,11,16,.7);-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px);color:#fff;font:400 1.05rem/1 var(--osd);letter-spacing:.06em;text-transform:uppercase;white-space:nowrap;cursor:pointer}
-.vf-swap:hover{border-color:var(--sodium);color:var(--sodium)}
 .vf::before{content:"";position:absolute;inset:0;z-index:2;pointer-events:none;background:repeating-linear-gradient(to bottom,rgba(0,0,0,.16) 0 1px,transparent 1px 3px)}
 .vf::after{content:"";position:absolute;inset:0;z-index:2;pointer-events:none;background:radial-gradient(ellipse at center,transparent 52%,rgba(0,0,0,.55) 100%)}
 .osd{position:absolute;inset:0;z-index:3;pointer-events:none;font:1.55rem/1 var(--osd);color:#fff;text-shadow:0 0 6px rgba(0,0,0,.7)}
@@ -339,7 +337,6 @@ p{margin:0}
   .projects,.studio-stats{grid-template-columns:1fr}
   .models{grid-template-columns:1fr 1fr;gap:8px;padding:8px}
   .ra-logo{left:50%;top:auto;bottom:7%;width:30%;transform:translateX(-50%)}
-  .vf-swap{top:8px;padding:4px 8px 3px;font-size:.8rem}
   .brand-head img{width:60px;height:60px;border-radius:13px}
   .thumbs{gap:6px}
   .play{width:26px;height:26px;margin:-13px 0 0 -13px}
@@ -409,13 +406,12 @@ p{margin:0}
     </div>
   </div>
   <div class="vf">
-    <img id="me-photo" src="img/me-2.webp" alt="Portrait of Amir Shiri" width="560" height="700" fetchpriority="high">
-    <button class="vf-swap" id="me-swap" type="button" aria-label="Show the next photo">Photo <span id="me-n">1</span>/3</button>
+    <img src="img/me.webp" alt="Portrait of Amir Shiri" width="560" height="700" fetchpriority="high">
     <div class="osd" aria-hidden="true">
       <span class="c tl"></span><span class="c tr"></span><span class="c bl"></span><span class="c br"></span>
       <span class="rec"><span class="dot"></span>REC</span>
       <span class="bat"><i></i><i></i><i></i><i class="e"></i></span>
-      <span class="cam" id="me-cam">CAM 01</span>
+      <span class="cam">CAM 01</span>
       <span class="tc" id="tc">00:00:00:00</span>
     </div>
   </div>
@@ -465,7 +461,7 @@ p{margin:0}
   <div class="studio-stats rv">
     <div class="card stat">
       <div class="stack" aria-hidden="true">
-        <span><img id="me-mini" src="img/me-2.webp" alt="" width="46" height="46" loading="lazy" decoding="async"></span>
+        <span><img src="img/me.webp" alt="" width="46" height="46" loading="lazy" decoding="async"></span>
         <span><svg class="i"><use href="#i-code"/></svg></span>
         <span><svg class="i"><use href="#i-brush"/></svg></span>
         <span><svg class="i"><use href="#i-brush"/></svg></span>
@@ -676,7 +672,7 @@ p{margin:0}
         <p>I lead a four-person studio: two developers and two artists. I run technical direction, production, and marketing, and step in wherever the games need me.</p>
       </li>
       <li>
-        <span class="d">2024 to 2028</span>
+        <span class="d">2024 to 2029</span>
         <h3>B.Eng. Software Engineering <span class="nw">(Co-op)</span></h3>
         <p class="org">Concordia University, Montreal</p>
       </li>
@@ -823,19 +819,6 @@ p{margin:0}
     var ms=Date.now()-t0,s=Math.floor(ms/1000);
     tc.textContent=pad(Math.floor(s/3600))+':'+pad(Math.floor(s/60)%60)+':'+pad(s%60)+':'+pad(Math.floor((ms%1000)/1000*24));
   },1000/12);
-})();
-</script>
-<script>
-(function(){
-  var photos=['img/me-2.webp','img/me-3.webp','img/me.webp'];
-  var img=document.getElementById('me-photo'),mini=document.getElementById('me-mini'),
-      btn=document.getElementById('me-swap'),n=document.getElementById('me-n'),cam=document.getElementById('me-cam');
-  if(!img||!btn)return;
-  var i=0;try{i=parseInt(localStorage.getItem('mePhoto'),10)||0}catch(e){}
-  if(i<0||i>=photos.length)i=0;
-  function show(){img.src=photos[i];if(mini)mini.src=photos[i];n.textContent=i+1;cam.textContent='CAM 0'+(i+1);}
-  show();
-  btn.addEventListener('click',function(){i=(i+1)%photos.length;show();try{localStorage.setItem('mePhoto',i)}catch(e){}});
 })();
 </script>
 </body>
